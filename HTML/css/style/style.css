@@ -572,3 +572,50 @@ footer {
     }
 
 }
+
+/* PROJETOS */
+
+.projects {
+    padding: 100px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    padding: 32px;
+    background: var(--background-secondary);
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--green);
+}
+
+.project-card > span {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.project-card h3 {
+    margin: 14px 0;
+}
+
+.project-card p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.project-card ul {
+    margin: 24px 0;
+}
+
+.project-card li {
+    margin-bottom: 9px;
+}
