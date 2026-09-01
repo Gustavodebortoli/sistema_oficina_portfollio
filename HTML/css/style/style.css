@@ -5,7 +5,7 @@
 :root {
     --background: #0a0a0a;
     --background-secondary: #151515;
-    --green: #39ff14;
+    --green: #2a57ea;
     --white: #ffffff;
     --gray: #a0a0a0;
     --border: #292929;
@@ -148,20 +148,16 @@ ul {
 ========================= */
 
 .hero {
-    min-height: 600px;
-
-    display: flex;
-    align-items: center;
-
-    background:
+    background-image:
         linear-gradient(
-            rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.75)
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.68)
         ),
-        url("../img/hero.jpg");
+        url("../../assets/images/Fotos Amostra/chave-mao.jpg");
 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero h1 {
