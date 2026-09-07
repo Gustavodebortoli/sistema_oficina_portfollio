@@ -98,162 +98,304 @@
     </section>
 
 
+```html
+<!-- =========================
+     SEÇÃO DE CONTATO
+========================= -->
 
-    <section class="contact">
+<section class="contato" id="contato">
 
-        <div class="container">
+    <div class="contato-container">
 
-            <div class="contact-content">
+        <!-- =========================
+             INFORMAÇÕES
+        ========================= -->
 
+        <div class="contato-info">
 
-                <div class="contact-info">
+            <span class="contato-label">
+                CONTATO
+            </span>
 
-                    <p class="section-tag">
-                        CONTATO
-                    </p>
+            <h2>
+                FALE
+                <span>CONOSCO.</span>
+            </h2>
 
-                    <h2>
-                        VAMOS CONVERSAR
-                    </h2>
-
-                    <p>
-                        DESCRIÇÃO
-                    </p>
-
-
-                    <div class="contact-item">
-
-                        <strong>
-                            Telefone
-                        </strong>
-
-                        <span>
-                            INFORMAÇÃO
-                        </span>
-
-                    </div>
+            <p class="contato-descricao">
+                Tem alguma dúvida ou quer agendar um serviço?
+                Entre em contato conosco e fale com nossa equipe.
+            </p>
 
 
-                    <div class="contact-item">
+            <!-- Telefone -->
+            <div class="contato-item">
 
-                        <strong>
-                            Endereço
-                        </strong>
-
-                        <span>
-                            INFORMAÇÃO
-                        </span>
-
-                    </div>
-
+                <div class="contato-icone">
+                    ☎
                 </div>
 
+                <div>
+                    <span>
+                        TELEFONE
+                    </span>
+
+                    <a href="tel:+5547999999999">
+                        (47) 99999-9999
+                    </a>
+                </div>
+
+            </div>
 
 
-                <form class="contact-form">
+            <!-- WhatsApp -->
+            <div class="contato-item">
 
+                <div class="contato-icone">
+                    W
+                </div>
 
-                    <div class="form-group">
+                <div>
+                    <span>
+                        WHATSAPP
+                    </span>
 
-                        <label for="nome">
-                            Nome
-                        </label>
-
-                        <input
-                            type="text"
-                            id="nome"
-                            name="nome"
-                            placeholder="Seu nome"
-                        >
-
-                    </div>
-
-                    
-                    <div class="form-group">
-
-                        <label for="telefone">
-                            Telefone
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="telefone"
-                            name="telefone"
-                            placeholder="Seu telefone"
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="servico">
-                            Serviço
-                        </label>
-
-                        <select
-                            id="servico"
-                            name="servico"
-                        >
-
-                            <option value="">
-                                Selecione
-                            </option>
-
-                            <option value="preparacao">
-                                Preparação
-                            </option>
-
-                            <option value="manutencao">
-                                Manutenção
-                            </option>
-
-                            <option value="personalizacao">
-                                Personalização
-                            </option>
-
-                            <option value="diagnostico">
-                                Diagnóstico
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="mensagem">
-                            Mensagem
-                        </label>
-
-                        <textarea
-                            id="mensagem"
-                            name="mensagem"
-                            rows="6"
-                            placeholder="Digite sua mensagem"
-                        ></textarea>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="btn"
+                    <a
+                        href="https://wa.me/5547999999999"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
-                        Enviar mensagem
-                    </button>
+                        (47) 99999-9999
+                    </a>
+                </div>
+
+            </div>
 
 
-                </form>
+            <!-- E-mail -->
+            <div class="contato-item">
 
+                <div class="contato-icone">
+                    @
+                </div>
+
+                <div>
+                    <span>
+                        E-MAIL
+                    </span>
+
+                    <a href="mailto:contato@amostra.com.br">
+                        contato@amostra.com.br
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Localização -->
+            <div class="contato-item">
+
+                <div class="contato-icone">
+                    ⌖
+                </div>
+
+                <div>
+                    <span>
+                        LOCALIZAÇÃO
+                    </span>
+
+                    <p>
+                        Itajaí - SC
+                    </p>
+                </div>
 
             </div>
 
         </div>
 
-    </section>
 
+        <!-- =========================
+             FORMULÁRIO
+        ========================= -->
+
+        <div class="contato-form-container">
+
+            <div class="contato-form-header">
+
+                <span>
+                    ENTRE EM CONTATO
+                </span>
+
+                <h3>
+                    COMO PODEMOS
+                    <strong>AJUDAR?</strong>
+                </h3>
+
+            </div>
+
+
+            <form class="contato-form" action="#" method="post">
+
+                <!-- Nome -->
+                <div class="form-grupo">
+
+                    <label for="nome">
+                        SEU NOME
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- E-mail -->
+                <div class="form-grupo">
+
+                    <label for="email">
+                        SEU E-MAIL
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Telefone -->
+                <div class="form-grupo">
+
+                    <label for="telefone">
+                        SEU TELEFONE
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(47) 99999-9999"
+                        autocomplete="tel"
+                    >
+
+                </div>
+
+
+                <!-- Serviço -->
+                <div class="form-grupo">
+
+                    <label for="servico">
+                        SERVIÇO DE INTERESSE
+                    </label>
+
+                    <select id="servico" name="servico">
+
+                        <option value="" selected>
+                            Selecione um serviço
+                        </option>
+
+                        <option value="mecanica-geral">
+                            Mecânica Geral
+                        </option>
+
+                        <option value="diagnostico">
+                            Diagnóstico Eletrônico
+                        </option>
+
+                        <option value="freios">
+                            Freios
+                        </option>
+
+                        <option value="suspensao">
+                            Suspensão
+                        </option>
+
+                        <option value="injecao">
+                            Injeção Eletrônica
+                        </option>
+
+                        <option value="performance">
+                            Performance
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Mensagem -->
+                <div class="form-grupo form-grupo-mensagem">
+
+                    <label for="mensagem">
+                        SUA MENSAGEM
+                    </label>
+
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        rows="6"
+                        placeholder="Conte brevemente o que você precisa..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Botão -->
+                <button
+                    type="submit"
+                    class="contato-submit"
+                >
+
+                    ENVIAR MENSAGEM
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         BARRA FINAL
+    ========================= -->
+
+    <div class="contato-final">
+
+        <p>
+            ATENDIMENTO PROFISSIONAL PARA O SEU VEÍCULO.
+        </p>
+
+        <a href="#inicio">
+            VOLTAR AO TOPO ↑
+        </a>
+
+    </div>
+
+</section>
+```
+
+
+
+
+
+    
 
 </main>
 
