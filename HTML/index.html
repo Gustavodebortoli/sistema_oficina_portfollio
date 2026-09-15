@@ -10,8 +10,11 @@
 
 <body>
 
-    <header class="header"> <a href="index.html" class="logo"> OFICINA<span>.</span> </a> <!-- Botão do menu --> <button
-            class="menu-toggle" aria-label="Abrir menu"> <span></span> <span></span> <span></span> </button>
+    <header class="header"> <a href="index.html" class="logo"> SUA OFICINA
+            <span> AQUI</span> </a>
+
+        <!-- Botão do menu --> <button class="menu-toggle" aria-label="Abrir menu"> <span></span>
+            <span></span> <span></span> </button>
         <!-- Menu -->
         <nav class="menu"> <a href="index.html">Início</a> <a href="sobre.html">Sobre</a> <a
                 href="servicos.html">Serviços</a> <a href="projetos.html">Projetos</a> <a
@@ -471,7 +474,11 @@
     <script src="./js/main.js"></script>
 
 
-    <script> const menuToggle = document.querySelector('.menu-toggle'); const menu = document.querySelector('.menu'); menuToggle.addEventListener('click', () => { menu.classList.toggle('active'); menuToggle.classList.toggle('active'); }); </script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        menuToggle.addEventListener('click', () => { menu.classList.toggle('active'); menuToggle.classList.toggle('active'); }); 
+    </script>
 </body>
 
 </html>
