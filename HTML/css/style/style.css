@@ -1879,3 +1879,181 @@ footer {
         transform: translateY(-7px) rotate(-45deg);
     }
 }
+
+/* =========================================================
+   CORREÇÃO DE OVERFLOW MOBILE
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   CONTAINERS
+========================================================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- CONTAINER ---------- */
+
+    .container {
+        width: 88%;
+        max-width: 100%;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero .container {
+        width: 88%;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+        font-size: 40px;
+        line-height: 1.05;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* ---------- SERVIÇOS ---------- */
+
+    .services {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .services-grid {
+        width: 100%;
+        max-width: 100%;
+
+        display: grid;
+
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* ---------- PROJETOS ---------- */
+
+    .projects {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .projects-grid {
+        width: 100%;
+        max-width: 100%;
+
+        display: grid;
+
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+
+    /* ---------- SOBRE ---------- */
+
+    .about {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-content {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-content > * {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+
+    /* ---------- DIFERENCIAIS ---------- */
+
+    .differentials {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ---------- DEPOIMENTOS ---------- */
+
+    .testimonials {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PEQUENO
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 88%;
+    }
+
+    .project-card,
+    .service-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
