@@ -143,7 +143,7 @@ Gostaria de confirmar a disponibilidade desse horário.`;
     // Formato: 55 + DDD + número
     //
     // Exemplo:
-    // 5547999999999
+    // 55479999999
 
     const numeroWhatsApp = "5547999999999";
 
