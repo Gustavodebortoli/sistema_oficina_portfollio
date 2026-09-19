@@ -3247,3 +3247,363 @@ body {
     }
 
 }
+/* =========================================================
+   MENU HAMBÚRGUER — BLOCO FINAL
+   ========================================================= */
+
+.header {
+    width: 100%;
+    height: 80px;
+
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 9999;
+
+    background: var(--background);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* LOGO */
+
+.header .logo,
+.logo {
+    display: flex;
+
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+.header .logo span,
+.logo span {
+    color: var(--green);
+}
+
+
+/* MENU DESKTOP */
+
+.menu {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 30px;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: color 0.25s ease;
+}
+
+.menu a:hover {
+    color: var(--green);
+}
+
+
+/* BOTÃO HAMBÚRGUER */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 0;
+
+    margin: 0;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    position: relative;
+
+    z-index: 10001;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 26px;
+
+    height: 2px;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: var(--white);
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        width: 100%;
+
+        height: 70px;
+
+        padding: 0 6%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+    }
+
+
+    /*
+    Mostra o botão
+    */
+
+    .menu-toggle {
+        display: flex;
+
+        margin-left: auto;
+    }
+
+
+    /*
+    MENU FECHADO
+    */
+
+    .menu {
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        right: 0;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        padding: 0;
+
+        margin: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        background: #0a0a0a;
+
+        border-bottom: 1px solid var(--border);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.2s ease,
+            transform 0.2s ease,
+            visibility 0.2s ease;
+
+        z-index: 10000;
+    }
+
+
+    /*
+    MENU ABERTO
+    */
+
+    .menu.active {
+        display: flex;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+
+    /*
+    LINKS
+    */
+
+    .menu a {
+        display: block;
+
+        width: 100%;
+
+        padding: 18px 6%;
+
+        margin: 0;
+
+        color: #ffffff;
+
+        background: #0a0a0a;
+
+        text-align: left;
+
+        font-size: 16px;
+
+        border-bottom: 1px solid #202020;
+    }
+
+
+    .menu a:hover {
+        color: var(--green);
+
+        background: #111111;
+    }
+
+
+    .menu a:last-child {
+        border-bottom: 0;
+    }
+
+
+    /*
+    X
+    */
+
+    .menu-toggle.active span:nth-child(1) {
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+}
+
+
+/* =========================================================
+   AGENDA
+   ========================================================= */
+
+.agenda-button:disabled {
+    opacity: 0.7;
+
+    cursor: wait;
+}
+
+
+.agenda-success {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    padding: 20px;
+
+    background: var(--background-secondary);
+
+    border: 1px solid var(--green);
+
+    color: var(--white);
+}
+
+
+.agenda-success strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--white);
+}
+
+
+.agenda-success p {
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+@media (max-width: 600px) {
+
+    .agenda-success {
+        align-items: flex-start;
+    }
+
+}

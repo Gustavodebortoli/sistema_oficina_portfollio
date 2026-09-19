@@ -1,38 +1,54 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    // ==================================================
-    // MENU HAMBÚRGUER
-    // ==================================================
+    /*
+    ======================================================
+    MENU HAMBÚRGUER
+    ======================================================
+    */
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
 
     if (menuToggle && menu) {
 
-        menuToggle.addEventListener("click", () => {
+        menuToggle.addEventListener("click", function (event) {
 
-            const aberto = menu.classList.toggle("active");
+            event.stopPropagation();
 
-            menuToggle.classList.toggle("active", aberto);
+            menu.classList.toggle("active");
+
+            menuToggle.classList.toggle("active");
+
+            const aberto =
+                menu.classList.contains("active");
 
             menuToggle.setAttribute(
                 "aria-expanded",
-                String(aberto)
+                aberto ? "true" : "false"
             );
 
             menuToggle.setAttribute(
                 "aria-label",
-                aberto ? "Fechar menu" : "Abrir menu"
+                aberto
+                    ? "Fechar menu"
+                    : "Abrir menu"
             );
 
         });
 
 
-        // Fecha o menu quando clicar em um link
+        /*
+        Fecha o menu ao clicar em um link
+        */
 
-        menu.querySelectorAll("a").forEach((link) => {
+        const links =
+            menu.querySelectorAll("a");
 
-            link.addEventListener("click", () => {
+
+        links.forEach(function (link) {
+
+            link.addEventListener("click", function () {
 
                 menu.classList.remove("active");
 
@@ -41,11 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 menuToggle.setAttribute(
                     "aria-expanded",
                     "false"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Abrir menu"
                 );
 
             });
@@ -53,218 +64,148 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        // Fecha o menu clicando fora dele
+        /*
+        Fecha clicando fora
+        */
 
-        document.addEventListener("click", (event) => {
+        document.addEventListener(
+            "click",
+            function (event) {
 
-            if (
-                menu.classList.contains("active") &&
-                !menu.contains(event.target) &&
-                !menuToggle.contains(event.target)
-            ) {
+                if (
+                    menu.classList.contains("active") &&
+                    !menu.contains(event.target) &&
+                    !menuToggle.contains(event.target)
+                ) {
 
-                menu.classList.remove("active");
+                    menu.classList.remove("active");
 
-                menuToggle.classList.remove("active");
+                    menuToggle.classList.remove("active");
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Abrir menu"
-                );
+                }
 
             }
-
-        });
+        );
 
     }
 
 
-    // ==================================================
-    // FORMULÁRIO DE AGENDAMENTO
-    // ==================================================
+    /*
+    ======================================================
+    AGENDAMENTO
+    ======================================================
+    */
 
-    const formulario = document.querySelector("#agenda-form");
+    const formulario =
+        document.getElementById("agenda-form");
+
 
     if (!formulario) {
+
         return;
+
     }
 
 
-    const nome = document.querySelector("#nome");
+    const nome =
+        document.getElementById("nome");
 
-    const telefone = document.querySelector("#telefone");
+    const telefone =
+        document.getElementById("telefone");
 
-    const carro = document.querySelector("#carro");
+    const carro =
+        document.getElementById("carro");
 
-    const servico = document.querySelector("#servico");
+    const servico =
+        document.getElementById("servico");
 
-    const descricao = document.querySelector("#descricao");
+    const descricao =
+        document.getElementById("descricao");
 
-    const data = document.querySelector("#data");
+    const data =
+        document.getElementById("data");
 
-    const horario = document.querySelector("#horario");
+    const horario =
+        document.getElementById("horario");
 
-    const botao = formulario.querySelector(
-        'button[type="submit"]'
-    );
-
-
-    // Número que receberá o pedido no WhatsApp
-    const numeroWhatsApp = "5547999492318";
+    const botao =
+        document.getElementById("agenda-button");
 
 
-    // ==================================================
-    // DATA LOCAL
-    // ==================================================
+    /*
+    Número que vai receber a mensagem
+    */
 
-    function obterDataLocalISO() {
+    const numeroWhatsApp =
+        "5547999492318";
+
+
+    /*
+    ======================================================
+    DATA
+    ======================================================
+    */
+
+    function dataAtual() {
 
         const agora = new Date();
 
-        const ano = agora.getFullYear();
+        const ano =
+            agora.getFullYear();
 
-        const mes = String(
-            agora.getMonth() + 1
-        ).padStart(2, "0");
+        const mes =
+            String(
+                agora.getMonth() + 1
+            ).padStart(2, "0");
 
-        const dia = String(
-            agora.getDate()
-        ).padStart(2, "0");
-
-        return `${ano}-${mes}-${dia}`;
-
-    }
-
-
-    function formatarData(dataISO) {
-
-        const [ano, mes, dia] = dataISO.split("-");
-
-        return `${dia}/${mes}/${ano}`;
-
-    }
-
-
-    // Impede escolher datas anteriores a hoje
-
-    data.min = obterDataLocalISO();
-
-
-    // ==================================================
-    // VALIDAÇÃO DO TELEFONE
-    // ==================================================
-
-    function telefoneValido(valor) {
-
-        const numeros = valor.replace(/\D/g, "");
+        const dia =
+            String(
+                agora.getDate()
+            ).padStart(2, "0");
 
         return (
-            numeros.length >= 10 &&
-            numeros.length <= 13
+            ano +
+            "-" +
+            mes +
+            "-" +
+            dia
         );
 
     }
 
 
-    // ==================================================
-    // MENSAGEM DE SUCESSO
-    // ==================================================
+    /*
+    Impede datas anteriores a hoje
+    */
 
-    function removerMensagem() {
-
-        const antiga = document.querySelector(
-            ".agenda-success"
-        );
-
-        if (antiga) {
-            antiga.remove();
-        }
-
-    }
+    data.min = dataAtual();
 
 
-    function mostrarMensagemSucesso() {
-
-        removerMensagem();
-
-
-        const mensagem =
-            document.createElement("div");
-
-
-        mensagem.className =
-            "agenda-success";
-
-
-        mensagem.setAttribute(
-            "role",
-            "status"
-        );
-
-
-        mensagem.setAttribute(
-            "aria-live",
-            "polite"
-        );
-
-
-        mensagem.innerHTML = `
-
-            <div
-                class="success-icon"
-                aria-hidden="true"
-            >
-                ✓
-            </div>
-
-            <div class="success-text">
-
-                <strong>
-                    Solicitação preparada com sucesso!
-                </strong>
-
-                <p>
-                    Seus dados foram preparados.
-                    Você será direcionado ao WhatsApp
-                    para confirmar a disponibilidade do horário.
-                </p>
-
-            </div>
-
-        `;
-
-
-        formulario.parentElement.insertBefore(
-            mensagem,
-            formulario
-        );
-
-
-        mensagem.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
-
-    }
-
-
-    // ==================================================
-    // ENVIO DO FORMULÁRIO
-    // ==================================================
+    /*
+    ======================================================
+    FORMULÁRIO
+    ======================================================
+    */
 
     formulario.addEventListener(
         "submit",
-        (event) => {
+        function (event) {
+
+            /*
+            Impede a página de recarregar
+            */
 
             event.preventDefault();
 
 
-            // Validação nativa do HTML
+            /*
+            Verifica os campos obrigatórios
+            */
 
             if (!formulario.checkValidity()) {
 
@@ -275,156 +216,40 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
-            // ==================================================
-            // PEGAR VALORES
-            // ==================================================
+            /*
+            Pega os valores
+            */
 
             const nomeValor =
                 nome.value.trim();
 
-
             const telefoneValor =
                 telefone.value.trim();
-
 
             const carroValor =
                 carro.value.trim();
 
-
             const servicoValor =
                 servico.value;
-
 
             const descricaoValor =
                 descricao.value.trim();
 
-
             const dataValor =
                 data.value;
-
 
             const horarioValor =
                 horario.value;
 
 
-            // ==================================================
-            // VALIDAÇÃO
-            // ==================================================
+            /*
+            ==================================================
+            MENSAGEM
+            ==================================================
+            */
 
-            if (
-                !nomeValor ||
-                !telefoneValor ||
-                !carroValor ||
-                !servicoValor ||
-                !dataValor ||
-                !horarioValor
-            ) {
-
-                alert(
-                    "Preencha todos os campos obrigatórios."
-                );
-
-                return;
-
-            }
-
-
-            // ==================================================
-            // TELEFONE
-            // ==================================================
-
-            if (!telefoneValido(telefoneValor)) {
-
-                alert(
-                    "Digite um número de WhatsApp válido."
-                );
-
-                telefone.focus();
-
-                return;
-
-            }
-
-
-            // ==================================================
-            // DATA
-            // ==================================================
-
-            const dataHoje =
-                obterDataLocalISO();
-
-
-            if (dataValor < dataHoje) {
-
-                alert(
-                    "A data escolhida já passou. Escolha uma data válida."
-                );
-
-                data.focus();
-
-                return;
-
-            }
-
-
-            // ==================================================
-            // HORÁRIO
-            // ==================================================
-
-            if (dataValor === dataHoje) {
-
-                const agora = new Date();
-
-
-                const agoraMinutos =
-                    agora.getHours() * 60 +
-                    agora.getMinutes();
-
-
-                const [hora, minuto] =
-                    horarioValor
-                        .split(":")
-                        .map(Number);
-
-
-                const horarioMinutos =
-                    hora * 60 +
-                    minuto;
-
-
-                if (
-                    horarioMinutos <=
-                    agoraMinutos
-                ) {
-
-                    alert(
-                        "Esse horário já passou. Escolha outro horário."
-                    );
-
-                    horario.focus();
-
-                    return;
-
-                }
-
-            }
-
-
-            // ==================================================
-            // NOME DO SERVIÇO
-            // ==================================================
-
-            const servicoNome =
-                servico.options[
-                    servico.selectedIndex
-                ].text.trim();
-
-
-            // ==================================================
-            // MENSAGEM PARA O WHATSAPP
-            // ==================================================
-
-            const mensagem = `Olá! Gostaria de solicitar um agendamento.
+            const mensagem =
+`Olá! Gostaria de solicitar um agendamento.
 
 *DADOS DO CLIENTE*
 
@@ -437,60 +262,113 @@ Veículo: ${carroValor}
 
 *SERVIÇO*
 
-Serviço: ${servicoNome}
+Serviço: ${servicoValor}
 
 Descrição:
 ${descricaoValor || "Não informado"}
 
 *AGENDAMENTO*
 
-Data: ${formatarData(dataValor)}
+Data: ${dataValor.split("-").reverse().join("/")}
 Horário: ${horarioValor}
 
 Gostaria de confirmar a disponibilidade desse horário.`;
 
 
-            // ==================================================
-            // LINK DO WHATSAPP
-            // ==================================================
+            /*
+            ==================================================
+            LINK WHATSAPP
+            ==================================================
+            */
 
-            const linkWhatsApp =
-                `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
-                    mensagem
-                )}`;
-
-
-            // ==================================================
-            // MOSTRAR CONFIRMAÇÃO
-            // ==================================================
-
-            mostrarMensagemSucesso();
+            const link =
+                "https://wa.me/" +
+                numeroWhatsApp +
+                "?text=" +
+                encodeURIComponent(mensagem);
 
 
-            // ==================================================
-            // DESABILITAR BOTÃO
-            // ==================================================
+            /*
+            ==================================================
+            BOTÃO
+            ==================================================
+            */
 
-            if (botao) {
+            botao.disabled = true;
 
-                botao.disabled = true;
+            botao.textContent =
+                "Abrindo WhatsApp...";
 
-                botao.textContent =
-                    "Abrindo WhatsApp...";
+
+            /*
+            ==================================================
+            ABRIR WHATSAPP
+            ==================================================
+            */
+
+            window.open(
+                link,
+                "_blank"
+            );
+
+
+            /*
+            ==================================================
+            MENSAGEM NA PÁGINA
+            ==================================================
+            */
+
+            let sucesso =
+                document.getElementById(
+                    "agenda-sucesso"
+                );
+
+
+            if (!sucesso) {
+
+                sucesso =
+                    document.createElement("div");
+
+                sucesso.id =
+                    "agenda-sucesso";
+
+                sucesso.className =
+                    "agenda-success";
+
+                sucesso.innerHTML = `
+                    
+                    <strong>
+                        Solicitação enviada!
+                    </strong>
+
+                    <p>
+                        O WhatsApp foi aberto com os dados
+                        do seu agendamento.
+                    </p>
+
+                `;
+
+                formulario.parentNode.insertBefore(
+                    sucesso,
+                    formulario
+                );
 
             }
 
 
-            // ==================================================
-            // ABRIR WHATSAPP
-            // ==================================================
+            /*
+            Depois de 2 segundos,
+            libera novamente o botão.
+            */
 
-            setTimeout(() => {
+            setTimeout(function () {
 
-                window.location.href =
-                    linkWhatsApp;
+                botao.disabled = false;
 
-            }, 700);
+                botao.textContent =
+                    "Solicitar agendamento";
+
+            }, 2000);
 
         }
     );
