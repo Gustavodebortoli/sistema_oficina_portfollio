@@ -2,215 +2,204 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Projetos | Amostra Custom</title>
-
     <link rel="stylesheet" href="css/style/style.css">
-
 </head>
 
 <body>
 
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            SUA OFICINA <span>AQUI</span>
+        </a>
 
-   <header class="header"> <a href="index.html" class="logo"> SUA OFICINA
-
-
-            <span>AQUI</span> </a>
-        <button class="menu-toggle" aria-label="Abrir menu">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+            aria-controls="menu-principal">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
         <!-- Menu -->
-        <nav class="menu">
+        <nav class="menu" id="menu">
             <a href="index.html">Início</a>
             <a href="sobre.html">Sobre</a>
             <a href="servicos.html">Serviços</a>
             <a href="projetos.html">Projetos</a>
             <a href="contato.html">Contato</a>
-             <a href="agenda.html">Agendamento</a>
+            <a href="agenda.html">Agendamento</a>
         </nav>
     </header>
 
-
-
-  <div class="container">
-
-    <div class="section-heading">
-        <span class="section-tag">SOLUÇÕES</span>
-
-        <h2>
-            UMA SOLUÇÃO QUE<br>
-            EVOLUI COM A OFICINA
-        </h2>
-
-        <p>
-            O projeto foi estruturado em três níveis,
-            permitindo que a oficina comece com uma presença
-            digital profissional e evolua para uma solução
-            completa de gestão.
-        </p>
-    </div>
-
-    <div class="projects-grid">
-
-        <article class="project-card">
-
-            <span>NÍVEL 1</span>
-
-            <h3>Presença Digital</h3>
-
-            <p>
-                Site institucional profissional para apresentar
-                a oficina, seus serviços e facilitar o contato
-                com novos clientes.
-            </p>
-
-            <ul>
-                <li>Site institucional</li>
-                <li>Apresentação de serviços</li>
-                <li>Página sobre a oficina</li>
-                <li>Portfólio de projetos</li>
-                <li>Formulário de contato</li>
-                <li>Design responsivo</li>
-            </ul>
-
-            <a href="contato.html" class="btn">
-                Solicitar projeto
-            </a>
-
-        </article>
-
-
-        <article class="project-card">
-
-            <span>NÍVEL 2</span>
-
-            <h3>Atendimento Digital</h3>
-
-            <p>
-                Evolução do site com funcionalidades voltadas
-                para facilitar o relacionamento entre a oficina
-                e seus clientes.
-            </p>
-
-            <ul>
-                <li>Tudo do Nível 1</li>
-                <li>Solicitação de orçamento</li>
-                <li>Agendamento de serviços</li>
-                <li>Atendimento digital</li>
-                <li>Interação com clientes</li>
-            </ul>
-
-            <a href="contato.html" class="btn">
-                Conhecer solução
-            </a>
-
-        </article>
-
-
-        <article class="project-card">
-
-            <span>NÍVEL 3</span>
-
-            <h3>Gestão Completa</h3>
-
-            <p>
-                Plataforma completa para centralizar as
-                operações da oficina e auxiliar no gerenciamento
-                do negócio.
-            </p>
-
-            <ul>
-                <li>Tudo dos níveis anteriores</li>
-                <li>Cadastro de clientes</li>
-                <li>Cadastro de veículos</li>
-                <li>Controle de serviços</li>
-                <li>Controle financeiro</li>
-                <li>Painel administrativo</li>
-            </ul>
-
-            <a href="contato.html" class="btn">
-                Conhecer solução
-            </a>
-
-        </article>
-
-    </div>
-
-</div>
-
-
-
-
-
-
-    <footer>
-
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
         <div class="container">
 
-            <div class="footer-content">
+            <div class="section-heading">
+                <span class="section-tag">SOLUÇÕES</span>
 
-                <div class="footer-brand">
-
-                    <a href="index.html" class="logo">
-                        AMOSTRA
-                        <span>CUSTOM</span>
-                    </a>
-
-                    <p>
-                        DESCRIÇÃO
-                    </p>
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h3>NAVEGAÇÃO</h3>
-
-                    <a href="index.html">Início</a>
-                    <a href="servicos.html">Serviços</a>
-                    <a href="sobre.html">Sobre</a>
-                    <a href="projetos.html">Projetos</a>
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h3>CONTATO</h3>
-
-                    <a href="contato.html">
-                        Contato
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer-bottom">
+                <h2>
+                    UMA SOLUÇÃO QUE<br>
+                    EVOLUI COM A OFICINA
+                </h2>
 
                 <p>
-                    INFORMAÇÃO
+                    O projeto foi estruturado em três níveis,
+                    permitindo que a oficina comece com uma presença
+                    digital profissional e evolua para uma solução
+                    completa de gestão.
                 </p>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <span>NÍVEL 1</span>
+                    <h3>Presença Digital</h3>
+                    <p>
+                        Site institucional profissional para apresentar
+                        a oficina, seus serviços e facilitar o contato
+                        com novos clientes.
+                    </p>
+                    <ul>
+                        <li>Site institucional</li>
+                        <li>Apresentação de serviços</li>
+                        <li>Página sobre a oficina</li>
+                        <li>Portfólio de projetos</li>
+                        <li>Formulário de contato</li>
+                        <li>Design responsivo</li>
+                    </ul>
+                    <a href="contato.html" class="btn">
+                        Solicitar projeto
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <span>NÍVEL 2</span>
+                    <h3>Atendimento Digital</h3>
+                    <p>
+                        Evolução do site com funcionalidades voltadas
+                        para facilitar o relacionamento entre a oficina
+                        e seus clientes.
+                    </p>
+                    <ul>
+                        <li>Tudo do Nível 1</li>
+                        <li>Solicitação de orçamento</li>
+                        <li>Agendamento de serviços</li>
+                        <li>Atendimento digital</li>
+                        <li>Interação com clientes</li>
+                    </ul>
+                    <a href="contato.html" class="btn">
+                        Conhecer solução
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <span>NÍVEL 3</span>
+                    <h3>Gestão Completa</h3>
+                    <p>
+                        Plataforma completa para centralizar as
+                        operações da oficina e auxiliar no gerenciamento
+                        do negócio.
+                    </p>
+                    <ul>
+                        <li>Tudo dos níveis anteriores</li>
+                        <li>Cadastro de clientes</li>
+                        <li>Cadastro de veículos</li>
+                        <li>Controle de serviços</li>
+                        <li>Controle financeiro</li>
+                        <li>Painel administrativo</li>
+                    </ul>
+                    <a href="contato.html" class="btn">
+                        Conhecer solução
+                    </a>
+                </article>
 
             </div>
 
         </div>
+    </main>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        AMOSTRA <span>CUSTOM</span>
+                    </a>
+                    <p>
+                        Soluções e desenvolvimento web sob medida para oficinas e entusiastas automotivos.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NAVEGAÇÃO</h3>
+                    <a href="index.html">Início</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="projetos.html">Projetos</a>
+                    <a href="agenda.html">Agendamento</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>CONTATO</h3>
+                    <a href="contato.html">Contato</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Amostra Custom. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 
- <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-        menuToggle.addEventListener('click', () => { menu.classList.toggle('active'); menuToggle.classList.toggle('active'); }); 
+    <!-- SCRIPT DE NAVEGAÇÃO / MENU -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const menu = document.getElementById("menu");
+
+            if (menuToggle && menu) {
+                menuToggle.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                    menu.classList.toggle("active");
+                    menuToggle.classList.toggle("active");
+
+                    const aberto = menu.classList.contains("active");
+                    menuToggle.setAttribute("aria-expanded", aberto ? "true" : "false");
+                    menuToggle.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+                });
+
+                /* Fecha o menu ao clicar em qualquer link */
+                const links = menu.querySelectorAll("a");
+                links.forEach(function (link) {
+                    link.addEventListener("click", function () {
+                        menu.classList.remove("active");
+                        menuToggle.classList.remove("active");
+                        menuToggle.setAttribute("aria-expanded", "false");
+                    });
+                });
+
+                /* Fecha o menu se clicar fora dele */
+                document.addEventListener("click", function (event) {
+                    if (
+                        menu.classList.contains("active") &&
+                        !menu.contains(event.target) &&
+                        !menuToggle.contains(event.target)
+                    ) {
+                        menu.classList.remove("active");
+                        menuToggle.classList.remove("active");
+                        menuToggle.setAttribute("aria-expanded", "false");
+                    }
+                });
+            }
+        });
     </script>
 </body>
 
