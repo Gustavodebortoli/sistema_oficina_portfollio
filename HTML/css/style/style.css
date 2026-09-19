@@ -2868,3 +2868,91 @@ body {
 
 }
 
+/* =========================================================
+   MENSAGEM DE SUCESSO
+   ========================================================= */
+
+.mensagem-sucesso {
+
+    display: none;
+
+    align-items: center;
+
+    gap: 18px;
+
+    width: 100%;
+
+    margin-bottom: 30px;
+
+    padding: 20px;
+
+    border: 1px solid var(--green);
+
+    background: var(--background-secondary);
+
+}
+
+.mensagem-sucesso.mostrar {
+
+    display: flex;
+
+}
+
+.sucesso-icone {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid var(--green);
+
+    color: var(--green);
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+}
+
+.mensagem-sucesso strong {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--white);
+
+    font-size: 15px;
+
+}
+
+.mensagem-sucesso p {
+
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+@media (max-width: 500px) {
+
+    .mensagem-sucesso {
+
+        align-items: flex-start;
+
+    }
+
+}
