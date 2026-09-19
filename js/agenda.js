@@ -7,18 +7,14 @@ const campoData = document.querySelector("#data");
 
 
 // =========================================================
-// NÚMERO DO WHATSAPP DA OFICINA
+// NÚMERO DO WHATSAPP
 // =========================================================
-
-// COLOQUE O NÚMERO REAL AQUI
-// Formato: 55 + DDD + número
-// Sem espaços, parênteses ou hífen
 
 const numeroWhatsApp = "5547999492318";
 
 
 // =========================================================
-// IMPEDIR DATAS PASSADAS
+// DATA MÍNIMA
 // =========================================================
 
 const hoje = new Date();
@@ -27,21 +23,16 @@ const ano = hoje.getFullYear();
 const mes = String(hoje.getMonth() + 1).padStart(2, "0");
 const dia = String(hoje.getDate()).padStart(2, "0");
 
-const dataAtual = `${ano}-${mes}-${dia}`;
-
-campoData.min = dataAtual;
+campoData.min = `${ano}-${mes}-${dia}`;
 
 
 // =========================================================
-// ENVIO DO FORMULÁRIO
+// FORMULÁRIO
 // =========================================================
 
 formulario.addEventListener("submit", function (event) {
-    const mensagemSucesso =
-    document.querySelector("#mensagem-sucesso");
 
-mensagemSucesso.classList.add("mostrar");
-
+    // Impede o formulário de recarregar a página
     event.preventDefault();
 
 
@@ -49,26 +40,19 @@ mensagemSucesso.classList.add("mostrar");
     // PEGAR DADOS
     // =====================================================
 
-    const nome =
-        document.querySelector("#nome").value.trim();
+    const nome = document.querySelector("#nome").value.trim();
 
-    const telefone =
-        document.querySelector("#telefone").value.trim();
+    const telefone = document.querySelector("#telefone").value.trim();
 
-    const carro =
-        document.querySelector("#carro").value.trim();
+    const carro = document.querySelector("#carro").value.trim();
 
-    const servico =
-        document.querySelector("#servico").value;
+    const servico = document.querySelector("#servico").value;
 
-    const descricao =
-        document.querySelector("#descricao").value.trim();
+    const descricao = document.querySelector("#descricao").value.trim();
 
-    const data =
-        document.querySelector("#data").value;
+    const data = document.querySelector("#data").value;
 
-    const horario =
-        document.querySelector("#horario").value;
+    const horario = document.querySelector("#horario").value;
 
 
     // =====================================================
@@ -122,7 +106,7 @@ mensagemSucesso.classList.add("mostrar");
 
 
     // =====================================================
-    // NOME DO SERVIÇO
+    // PEGAR NOME DO SERVIÇO
     // =====================================================
 
     const campoServico =
@@ -135,7 +119,7 @@ mensagemSucesso.classList.add("mostrar");
 
 
     // =====================================================
-    // MENSAGEM DO WHATSAPP
+    // MENSAGEM
     // =====================================================
 
     const mensagem =
@@ -167,7 +151,7 @@ Gostaria de confirmar a disponibilidade desse horário.`;
 
 
     // =====================================================
-    // CRIAR LINK DO WHATSAPP
+    // LINK WHATSAPP
     // =====================================================
 
     const mensagemCodificada =
@@ -178,10 +162,20 @@ Gostaria de confirmar a disponibilidade desse horário.`;
 
 
     // =====================================================
-    // MENSAGEM DE SUCESSO
+    // MOSTRAR SUCESSO
     // =====================================================
 
-    mostrarMensagemSucesso();
+    const mensagemSucesso =
+        document.querySelector("#mensagem-sucesso");
+
+    mensagemSucesso.classList.add("mostrar");
+
+
+    // =====================================================
+    // LIMPAR FORMULÁRIO
+    // =====================================================
+
+    formulario.reset();
 
 
     // =====================================================
@@ -198,70 +192,3 @@ Gostaria de confirmar a disponibilidade desse horário.`;
     }, 500);
 
 });
-
-
-// =========================================================
-// MENSAGEM DE SUCESSO
-// =========================================================
-
-function mostrarMensagemSucesso() {
-
-    // Evita mensagens duplicadas
-
-    const mensagemExistente =
-        document.querySelector(".agenda-success");
-
-    if (mensagemExistente) {
-
-        mensagemExistente.remove();
-
-    }
-
-
-    // Criar elemento
-
-    const mensagem =
-        document.createElement("div");
-
-    mensagem.classList.add("agenda-success");
-
-
-    mensagem.innerHTML = `
-
-        <div class="success-icon">
-            ✓
-        </div>
-
-        <div class="success-text">
-
-            <strong>
-                Agendamento enviado com sucesso!
-            </strong>
-
-            <p>
-                Sua solicitação foi preparada.
-                Você será direcionado ao WhatsApp
-                para confirmar o agendamento.
-            </p>
-
-        </div>
-
-    `;
-
-
-    // Colocar mensagem antes do formulário
-
-    formulario.parentElement.insertBefore(
-        mensagem,
-        formulario
-    );
-
-
-    // Rolar suavemente até a mensagem
-
-    mensagem.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
-
-}
