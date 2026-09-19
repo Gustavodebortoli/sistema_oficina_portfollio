@@ -7,54 +7,72 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contato | Amostra Custom</title>
+    <title>Agenda | Amostra Custom</title>
 
     <link rel="stylesheet" href="css/style/style.css">
+
 </head>
 
 <body>
 
 
-    <header class="header"> <a href="index.html" class="logo"> SUA OFICINA
+    <!-- HEADER -->
 
+    <header class="header">
 
-            <span>AQUI</span> </a>
-        <button class="menu-toggle" aria-label="Abrir menu">
+        <a href="index.html" class="logo">
+            SUA OFICINA
+            <span>AQUI</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+            aria-controls="menu-principal">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <!-- Menu -->
-        <nav class="menu">
+        <nav class="menu" id="menu-principal">
+
             <a href="index.html">Início</a>
+
             <a href="sobre.html">Sobre</a>
+
             <a href="servicos.html">Serviços</a>
+
             <a href="projetos.html">Projetos</a>
+
             <a href="contato.html">Contato</a>
+
             <a href="agenda.html">Agendamento</a>
+
         </nav>
+
     </header>
 
 
+    <!-- CONTEÚDO -->
 
     <main>
 
 
-        <section class="page-hero">
+        <!-- HERO -->
 
-            <div class="container">
+        <section class="agenda-hero">
 
-                <p class="section-tag">
-                    FALE CONOSCO
-                </p>
+            <div class="agenda-hero-content">
+
+                <span class="agenda-tag">
+                    AGENDAMENTO
+                </span>
 
                 <h1>
-                    ENTRE EM CONTATO
+                    Agende seu serviço
                 </h1>
 
                 <p>
-                    DESCRIÇÃO
+                    Escolha o serviço que você precisa e solicite um horário
+                    para levar seu veículo à oficina.
                 </p>
 
             </div>
@@ -62,198 +80,105 @@
         </section>
 
 
+        <!-- AGENDA -->
 
-        <!-- =========================
-     SEÇÃO DE CONTATO
-========================= -->
+        <section class="agenda-section">
 
-        <section class="contato" id="contato">
-
-            <div class="contato-container">
-
-                <!-- =========================
-             INFORMAÇÕES
-        ========================= -->
-
-                <div class="contato-info">
-
-                    <span class="contato-label">
-                        CONTATO
-                    </span>
-
-                    <h2>
-                        FALE
-                        <span>CONOSCO.</span>
-                    </h2>
-
-                    <p class="contato-descricao">
-                        Tem alguma dúvida ou quer agendar um serviço?
-                        Entre em contato conosco e fale com nossa equipe.
-                    </p>
+            <div class="agenda-container">
 
 
-                    <!-- Telefone -->
-                    <div class="contato-item">
+                <!-- FORMULÁRIO -->
 
-                        <div class="contato-icone">
-                            ☎
-                        </div>
+                <div class="agenda-form-container">
 
-                        <div>
-                            <span>
-                                TELEFONE
-                            </span>
-
-                            <a href="tel:+5547999999999">
-                                (47) 99999-9999
-                            </a>
-                        </div>
-
-                    </div>
-
-
-                    <!-- WhatsApp -->
-                    <div class="contato-item">
-
-                        <div class="contato-icone">
-                            W
-                        </div>
-
-                        <div>
-                            <span>
-                                WHATSAPP
-                            </span>
-
-                            <a href="https://wa.me/5547999999999" target="_blank" rel="noopener noreferrer">
-                                (47) 99999-9999
-                            </a>
-                        </div>
-
-                    </div>
-
-
-                    <!-- E-mail -->
-                    <div class="contato-item">
-
-                        <div class="contato-icone">
-                            @
-                        </div>
-
-                        <div>
-                            <span>
-                                E-MAIL
-                            </span>
-
-                            <a href="mailto:contato@amostra.com.br">
-                                contato@amostra.com.br
-                            </a>
-                        </div>
-
-                    </div>
-
-
-                    <!-- Localização -->
-                    <div class="contato-item">
-
-                        <div class="contato-icone">
-                            ⌖
-                        </div>
-
-                        <div>
-                            <span>
-                                LOCALIZAÇÃO
-                            </span>
-
-                            <p>
-                                Itajaí - SC
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =========================
-             FORMULÁRIO
-        ========================= -->
-
-                <div class="contato-form-container">
-
-                    <div class="contato-form-header">
+                    <div class="section-title">
 
                         <span>
-                            ENTRE EM CONTATO
+                            01
                         </span>
 
-                        <h3>
-                            COMO PODEMOS
-                            <strong>AJUDAR?</strong>
-                        </h3>
+                        <h2>
+                            Dados do veículo
+                        </h2>
 
                     </div>
 
 
-                    <form class="contato-form" action="#" method="post">
+                    <form class="agenda-form" id="agenda-form">
 
-                        <!-- Nome -->
-                        <div class="form-grupo">
+
+                        <!-- NOME -->
+
+                        <div class="form-group">
 
                             <label for="nome">
-                                SEU NOME
+                                Nome
                             </label>
 
-                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name"
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name"
                                 required>
 
                         </div>
 
 
-                        <!-- E-mail -->
-                        <div class="form-grupo">
+                        <!-- TELEFONE / VEÍCULO -->
 
-                            <label for="email">
-                                SEU E-MAIL
-                            </label>
+                        <div class="form-row">
 
-                            <input type="email" id="email" name="email" placeholder="Digite seu e-mail"
-                                autocomplete="email" required>
+                            <div class="form-group">
+
+                                <label for="telefone">
+                                    WhatsApp
+                                </label>
+
+                                <input type="tel" id="telefone" name="telefone" placeholder="(47) 99999-9999"
+                                    autocomplete="tel" inputmode="tel" required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="carro">
+                                    Veículo
+                                </label>
+
+                                <input type="text" id="carro" name="carro" placeholder="Ex: Vectra 2.0" required>
+
+                            </div>
 
                         </div>
 
 
-                        <!-- Telefone -->
-                        <div class="form-grupo">
+                        <!-- SERVIÇO -->
 
-                            <label for="telefone">
-                                SEU TELEFONE
-                            </label>
+                        <div class="section-title form-section-title">
 
-                            <input type="tel" id="telefone" name="telefone" placeholder="(47) 99999-9999"
-                                autocomplete="tel">
+                            <span>
+                                02
+                            </span>
+
+                            <h2>
+                                Serviço
+                            </h2>
 
                         </div>
 
 
-                        <!-- Serviço -->
-                        <div class="form-grupo">
+                        <div class="form-group">
 
                             <label for="servico">
-                                SERVIÇO DE INTERESSE
+                                Serviço desejado
                             </label>
 
-                            <select id="servico" name="servico">
+                            <select id="servico" name="servico" required>
 
-                                <option value="" selected>
+                                <option value="">
                                     Selecione um serviço
                                 </option>
 
-                                <option value="mecanica-geral">
-                                    Mecânica Geral
-                                </option>
-
-                                <option value="diagnostico">
-                                    Diagnóstico Eletrônico
+                                <option value="manutencao">
+                                    Manutenção preventiva
                                 </option>
 
                                 <option value="freios">
@@ -264,12 +189,20 @@
                                     Suspensão
                                 </option>
 
-                                <option value="injecao">
-                                    Injeção Eletrônica
+                                <option value="motor">
+                                    Motor
                                 </option>
 
-                                <option value="performance">
-                                    Performance
+                                <option value="embreagem">
+                                    Embreagem
+                                </option>
+
+                                <option value="revisao">
+                                    Revisão
+                                </option>
+
+                                <option value="outro">
+                                    Outro
                                 </option>
 
                             </select>
@@ -277,133 +210,214 @@
                         </div>
 
 
-                        <!-- Mensagem -->
-                        <div class="form-grupo form-grupo-mensagem">
+                        <!-- DESCRIÇÃO -->
 
-                            <label for="mensagem">
-                                SUA MENSAGEM
+                        <div class="form-group">
+
+                            <label for="descricao">
+                                Descreva o problema ou serviço
                             </label>
 
-                            <textarea id="mensagem" name="mensagem" rows="6"
-                                placeholder="Conte brevemente o que você precisa..."></textarea>
+                            <textarea id="descricao" name="descricao" rows="5"
+                                placeholder="Conte brevemente o que precisa ser feito no veículo..."></textarea>
 
                         </div>
 
 
-                        <!-- Botão -->
-                        <button type="submit" class="contato-submit">
+                        <!-- HORÁRIO -->
 
-                            ENVIAR MENSAGEM
+                        <div class="section-title form-section-title">
 
                             <span>
-                                →
+                                03
                             </span>
 
+                            <h2>
+                                Horário
+                            </h2>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="data">
+                                    Data desejada
+                                </label>
+
+                                <input type="date" id="data" name="data" required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="horario">
+                                    Horário desejado
+                                </label>
+
+                                <select id="horario" name="horario" required>
+
+                                    <option value="">
+                                        Selecione
+                                    </option>
+
+                                    <option value="08:00">
+                                        08:00
+                                    </option>
+
+                                    <option value="09:00">
+                                        09:00
+                                    </option>
+
+                                    <option value="10:00">
+                                        10:00
+                                    </option>
+
+                                    <option value="11:00">
+                                        11:00
+                                    </option>
+
+                                    <option value="13:30">
+                                        13:30
+                                    </option>
+
+                                    <option value="14:00">
+                                        14:00
+                                    </option>
+
+                                    <option value="15:00">
+                                        15:00
+                                    </option>
+
+                                    <option value="16:00">
+                                        16:00
+                                    </option>
+
+                                    <option value="17:00">
+                                        17:00
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BOTÃO -->
+
+                        <button type="submit" class="agenda-button">
+                            Solicitar agendamento
                         </button>
+
 
                     </form>
 
                 </div>
 
-            </div>
+
+                <!-- LATERAL -->
+
+                <aside class="agenda-info">
 
 
-            <!-- =========================
-         BARRA FINAL
-    ========================= -->
+                    <div class="agenda-info-box">
 
-            <div class="contato-final">
+                        <span class="agenda-info-number">
+                            01
+                        </span>
 
-                <p>
-                    ATENDIMENTO PROFISSIONAL PARA O SEU VEÍCULO.
-                </p>
+                        <h3>
+                            Escolha o serviço
+                        </h3>
 
-                <a href="#inicio">
-                    VOLTAR AO TOPO ↑
-                </a>
+                        <p>
+                            Informe qual serviço seu veículo precisa
+                            e descreva brevemente o problema.
+                        </p>
+
+                    </div>
+
+
+                    <div class="agenda-info-box">
+
+                        <span class="agenda-info-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Escolha o horário
+                        </h3>
+
+                        <p>
+                            Selecione a data e o horário que deseja
+                            levar o veículo até a oficina.
+                        </p>
+
+                    </div>
+
+
+                    <div class="agenda-info-box">
+
+                        <span class="agenda-info-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Confirmação
+                        </h3>
+
+                        <p>
+                            Após o envio, entraremos em contato para
+                            confirmar a disponibilidade do horário.
+                        </p>
+
+                    </div>
+
+
+                    <div class="agenda-notice">
+
+                        <strong>
+                            Importante
+                        </strong>
+
+                        <p>
+                            O envio da solicitação não garante
+                            automaticamente o horário. Aguarde nossa
+                            confirmação.
+                        </p>
+
+                    </div>
+
+
+                </aside>
+
 
             </div>
 
         </section>
 
-
-
-
-
-
-
-
     </main>
 
 
+    <!-- FOOTER -->
 
-    <footer>
+    <footer class="footer">
 
-        <div class="container">
-
-            <div class="footer-content">
-
-                <div class="footer-brand">
-
-                    <a href="index.html" class="logo">
-                        AMOSTRA
-                        <span>CUSTOM</span>
-                    </a>
-
-                    <p>
-                        DESCRIÇÃO
-                    </p>
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h3>NAVEGAÇÃO</h3>
-
-                    <a href="index.html">Início</a>
-                    <a href="servicos.html">Serviços</a>
-                    <a href="sobre.html">Sobre</a>
-                    <a href="projetos.html">Projetos</a>
-                    
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h3>CONTATO</h3>
-
-                    <a href="contato.html">
-                        Contato
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer-bottom">
-
-                <p>
-                    INFORMAÇÃO
-                </p>
-
-            </div>
-
-        </div>
+        <p>
+            © 2026 Amostra Custom. Todos os direitos reservados.
+        </p>
 
     </footer>
 
 
-    <script src="js/main.js"></script>
+    <!-- JAVASCRIPT -->
 
+    <script src="js/agenda.js" defer></script>
 
-     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-        menuToggle.addEventListener('click', () => { menu.classList.toggle('active'); menuToggle.classList.toggle('active'); }); 
-    </script>
 </body>
 
 </html>

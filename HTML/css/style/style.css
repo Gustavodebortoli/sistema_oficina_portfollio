@@ -3050,3 +3050,200 @@ body {
     }
 
 }
+
+/* =========================================================
+   HEADER / MENU — VERSÃO FINAL
+   ========================================================= */
+
+.header {
+    width: 100%;
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1000;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+}
+
+.header .logo {
+    flex-shrink: 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--green);
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 42px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 0;
+    background: var(--white);
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   MENU MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 70px;
+        padding: 0 6%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-self: center;
+        margin-left: auto;
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+
+        padding: 10px 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        background: var(--background);
+
+        border-bottom: 1px solid var(--border);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.25s ease,
+            transform 0.25s ease,
+            visibility 0.25s ease;
+    }
+
+    .menu.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+    .menu a {
+        width: 100%;
+
+        padding: 17px 6%;
+
+        text-align: left;
+
+        border-bottom: 1px solid #151515;
+    }
+
+    .menu a:last-child {
+        border-bottom: 0;
+    }
+
+
+    /* X DO MENU */
+
+    .menu-toggle.active span:nth-child(1) {
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+}
+
+
+/* =========================================================
+   AGENDA
+   ========================================================= */
+
+.agenda-button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+}
+
+.agenda-success {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 500px) {
+
+    .agenda-success {
+        flex-direction: row;
+        gap: 14px;
+    }
+
+    .success-text {
+        min-width: 0;
+    }
+
+}
