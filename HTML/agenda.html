@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda | Amostra Custom</title>
+
+    <link rel="stylesheet" href="css/style/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            SUA OFICINA
+        </a>
+
+        <nav class="nav">
+
+            <a href="index.html">Início</a>
+
+            <a href="sobre.html">Sobre</a>
+
+            <a href="servicos.html">Serviços</a>
+
+            <a href="projetos.html">Projetos</a>
+
+            <a href="contato.html">Contato</a>
+
+            <a href="agenda.html" class="active">Agenda</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="agenda-hero">
+
+            <div class="agenda-hero-content">
+
+                <span class="agenda-tag">
+                    AGENDAMENTO
+                </span>
+
+                <h1>
+                    Agende seu serviço
+                </h1>
+
+                <p>
+                    Escolha o serviço que você precisa e solicite um horário
+                    para levar seu veículo à oficina.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- AGENDA -->
+
+        <section class="agenda-section">
+
+            <div class="agenda-container">
+
+
+                <!-- FORMULÁRIO -->
+
+                <div class="agenda-form-container">
+
+                    <div class="section-title">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h2>
+                            Dados do veículo
+                        </h2>
+
+                    </div>
+
+
+                    <form class="agenda-form">
+
+
+                        <div class="form-group">
+
+                            <label for="nome">
+                                Nome
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                placeholder="Seu nome"
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="telefone">
+                                    WhatsApp
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="telefone"
+                                    name="telefone"
+                                    placeholder="(47) 99999-9999"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="carro">
+                                    Veículo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="carro"
+                                    name="carro"
+                                    placeholder="Ex: Vectra 2.0"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="section-title form-section-title">
+
+                            <span>
+                                02
+                            </span>
+
+                            <h2>
+                                Serviço
+                            </h2>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="servico">
+                                Serviço desejado
+                            </label>
+
+                            <select id="servico" name="servico">
+
+                                <option value="">
+                                    Selecione um serviço
+                                </option>
+
+                                <option value="manutencao">
+                                    Manutenção preventiva
+                                </option>
+
+                                <option value="freios">
+                                    Freios
+                                </option>
+
+                                <option value="suspensao">
+                                    Suspensão
+                                </option>
+
+                                <option value="motor">
+                                    Motor
+                                </option>
+
+                                <option value="embreagem">
+                                    Embreagem
+                                </option>
+
+                                <option value="revisao">
+                                    Revisão
+                                </option>
+
+                                <option value="outro">
+                                    Outro
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="descricao">
+                                Descreva o problema ou serviço
+                            </label>
+
+                            <textarea
+                                id="descricao"
+                                name="descricao"
+                                rows="5"
+                                placeholder="Conte brevemente o que precisa ser feito no veículo..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="section-title form-section-title">
+
+                            <span>
+                                03
+                            </span>
+
+                            <h2>
+                                Horário
+                            </h2>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="data">
+                                    Data desejada
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="data"
+                                    name="data"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="horario">
+                                    Horário desejado
+                                </label>
+
+                                <select id="horario" name="horario">
+
+                                    <option value="">
+                                        Selecione
+                                    </option>
+
+                                    <option value="08:00">
+                                        08:00
+                                    </option>
+
+                                    <option value="09:00">
+                                        09:00
+                                    </option>
+
+                                    <option value="10:00">
+                                        10:00
+                                    </option>
+
+                                    <option value="11:00">
+                                        11:00
+                                    </option>
+
+                                    <option value="13:30">
+                                        13:30
+                                    </option>
+
+                                    <option value="14:00">
+                                        14:00
+                                    </option>
+
+                                    <option value="15:00">
+                                        15:00
+                                    </option>
+
+                                    <option value="16:00">
+                                        16:00
+                                    </option>
+
+                                    <option value="17:00">
+                                        17:00
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="agenda-button"
+                        >
+                            Solicitar agendamento
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+
+                <!-- LATERAL -->
+
+                <aside class="agenda-info">
+
+
+                    <div class="agenda-info-box">
+
+                        <span class="agenda-info-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Escolha o serviço
+                        </h3>
+
+                        <p>
+                            Informe qual serviço seu veículo precisa
+                            e descreva brevemente o problema.
+                        </p>
+
+                    </div>
+
+
+                    <div class="agenda-info-box">
+
+                        <span class="agenda-info-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Escolha o horário
+                        </h3>
+
+                        <p>
+                            Selecione a data e o horário que deseja
+                            levar o veículo até a oficina.
+                        </p>
+
+                    </div>
+
+
+                    <div class="agenda-info-box">
+
+                        <span class="agenda-info-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Confirmação
+                        </h3>
+
+                        <p>
+                            Após o envio, entraremos em contato para
+                            confirmar a disponibilidade do horário.
+                        </p>
+
+                    </div>
+
+
+                    <div class="agenda-notice">
+
+                        <strong>
+                            Importante
+                        </strong>
+
+                        <p>
+                            O envio da solicitação não garante
+                            automaticamente o horário. Aguarde nossa
+                            confirmação.
+                        </p>
+
+                    </div>
+
+
+                </aside>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Amostra Custom. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+<script src="agenda.js"></script>
+
+</body>
+
+</html>

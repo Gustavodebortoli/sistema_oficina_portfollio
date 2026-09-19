@@ -2057,3 +2057,564 @@ body {
     }
 
 }
+
+/* =========================================================
+   AGENDA
+   ========================================================= */
+
+
+.agenda-hero {
+
+    width: 100%;
+
+    padding: 130px 8% 90px;
+
+    background: var(--background);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.agenda-hero-content {
+
+    max-width: 850px;
+
+}
+
+
+.agenda-tag {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: var(--green);
+
+}
+
+
+.agenda-hero h1 {
+
+    margin: 0 0 20px;
+
+    font-size: clamp(42px, 6vw, 76px);
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    color: var(--white);
+
+}
+
+
+.agenda-hero p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: var(--gray);
+
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+
+.agenda-section {
+
+    width: 100%;
+
+    padding: 90px 8% 110px;
+
+    background: var(--background);
+
+}
+
+
+.agenda-container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.8fr);
+
+    gap: 70px;
+
+    align-items: start;
+
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+
+.agenda-form-container {
+
+    width: 100%;
+
+}
+
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.section-title span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 38px;
+
+    height: 38px;
+
+    border: 1px solid var(--green);
+
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.section-title h2 {
+
+    margin: 0;
+
+    font-size: 27px;
+
+    color: var(--white);
+
+    font-weight: 600;
+
+}
+
+
+.form-section-title {
+
+    margin-top: 60px;
+
+}
+
+
+.agenda-form {
+
+    width: 100%;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+.form-group label {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    color: var(--white);
+
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 16px 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 0;
+
+    outline: none;
+
+    background: var(--background-secondary);
+
+    color: var(--white);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #666;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--green);
+
+}
+
+
+.form-group select {
+
+    cursor: pointer;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 140px;
+
+}
+
+
+/* =========================================================
+   BOTÃO
+   ========================================================= */
+
+
+.agenda-button {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 18px 25px;
+
+    border: 1px solid var(--green);
+
+    background: var(--green);
+
+    color: var(--white);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.agenda-button:hover {
+
+    background: transparent;
+
+    color: var(--green);
+
+}
+
+
+/* =========================================================
+   LATERAL
+   ========================================================= */
+
+
+.agenda-info {
+
+    position: sticky;
+
+    top: 30px;
+
+}
+
+
+.agenda-info-box {
+
+    padding: 0 0 30px;
+
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.agenda-info-number {
+
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.agenda-info-box h3 {
+
+    margin: 0 0 10px;
+
+    color: var(--white);
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+}
+
+
+.agenda-info-box p {
+
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   AVISO
+   ========================================================= */
+
+
+.agenda-notice {
+
+    margin-top: 45px;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    background: var(--background-secondary);
+
+}
+
+
+.agenda-notice strong {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--green);
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.agenda-notice p {
+
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+
+.footer {
+
+    width: 100%;
+
+    padding: 30px 8%;
+
+    border-top: 1px solid var(--border);
+
+    background: var(--background);
+
+    text-align: center;
+
+}
+
+
+.footer p {
+
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+
+@media (max-width: 900px) {
+
+    .agenda-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+
+    }
+
+
+    .agenda-info {
+
+        position: static;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .agenda-hero {
+
+        padding: 100px 6% 70px;
+
+    }
+
+
+    .agenda-section {
+
+        padding: 70px 6% 80px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .agenda-hero h1 {
+
+        font-size: 46px;
+
+    }
+
+
+    .agenda-hero p {
+
+        font-size: 16px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 23px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .agenda-hero h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .agenda-section {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+
+    }
+
+}
