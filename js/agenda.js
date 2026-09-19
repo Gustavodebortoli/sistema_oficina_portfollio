@@ -37,6 +37,10 @@ campoData.min = dataAtual;
 // =========================================================
 
 formulario.addEventListener("submit", function (event) {
+    const mensagemSucesso =
+    document.querySelector("#mensagem-sucesso");
+
+mensagemSucesso.classList.add("mostrar");
 
     event.preventDefault();
 
