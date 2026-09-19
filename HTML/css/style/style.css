@@ -2777,3 +2777,94 @@ body {
     }
 
 }
+
+/* =========================================================
+   MENSAGEM DE SUCESSO - AGENDA
+   ========================================================= */
+
+.agenda-success {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+
+    padding: 22px 25px;
+
+    border: 1px solid var(--green);
+
+    background: var(--background-secondary);
+
+}
+
+
+.success-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid var(--green);
+
+    color: var(--green);
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+.success-text strong {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--white);
+
+    font-size: 15px;
+
+}
+
+
+.success-text p {
+
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .agenda-success {
+
+        align-items: flex-start;
+
+        padding: 18px;
+
+    }
+
+}
+
