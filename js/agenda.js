@@ -14,7 +14,7 @@ const campoData = document.querySelector("#data");
 // Formato: 55 + DDD + número
 // Sem espaços, parênteses ou hífen
 
-const numeroWhatsApp = "5547999999999";
+const numeroWhatsApp = "5547999492318";
 
 
 // =========================================================
@@ -170,7 +170,7 @@ Gostaria de confirmar a disponibilidade desse horário.`;
         encodeURIComponent(mensagem);
 
     const linkWhatsApp =
-        `https://wa.me/${5547999492318}?text=${mensagemCodificada}`;
+        `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
 
 
     // =====================================================
